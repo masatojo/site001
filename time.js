@@ -39,6 +39,8 @@ window.addEventListener('load', function(){
     		//座標を指定して文字を描く（座標は画像の中心に）
     		var x = (canvas.width / 2);
     		var y = (canvas.height / 2);
+		console.log(canvas.width / 2);
+		console.log(canvas.height / 2);
     		ctx.fillText("テスト" x, y);
 	});
 });
