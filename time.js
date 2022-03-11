@@ -1,6 +1,6 @@
 //テストコード
 window.addEventListener('load', function(){
-    consolog.log("test");
+    console.log("test");
     var url = "https://worldtimeapi.org/api/timezone/Asia/Tokyo";
     let r = new XMLHttpRequest();
     r.open('GET', url);
