@@ -41,7 +41,7 @@ window.addEventListener('load', function(){
     		var y = (canvas.height / 2);
 		console.log(canvas.width / 2);
 		console.log(canvas.height / 2);
-    		ctx.fillText("テスト", x, y);
+    		ctx.fillText(date, x, y);
 	});
 });
 
