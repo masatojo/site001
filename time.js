@@ -1,4 +1,5 @@
 window.onload = function() {
+    consolog.log("test");
     var url = "https://worldtimeapi.org/api/timezone/Asia/Tokyo";
     let r = new XMLHttpRequest();
     r.open('GET', url);
