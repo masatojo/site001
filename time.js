@@ -24,7 +24,7 @@ window.addEventListener('load', function(){
 	image.onload = (function () {
 		console.log("test2");
 		//画像ロードが完了してからキャンバスの準備をする
-		var canvas = document.getElementById(id);
+		var canvas = document.getElementById("testCanvas");
 		var ctx = canvas.getContext('2d');
 		//キャンバスのサイズを画像サイズに合わせる
 		canvas.width = image.width;
