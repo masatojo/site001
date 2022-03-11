@@ -32,15 +32,14 @@ window.addEventListener('load', function(){
 		//キャンバスに画像を描画（開始位置0,0）
 		ctx.drawImage(image, 0, 0);
         	ctx.font = '32px serif';
-		    ctx.fillStyle = '#404040';
+		ctx.fillStyle = '#404040';
     		//文字の配置を指定（左上基準にしたければtop/leftだが、文字の中心座標を指定するのでcenter
     		ctx.textBaseline = 'center';
     		ctx.textAlign = 'center';
     		//座標を指定して文字を描く（座標は画像の中心に）
     		var x = (canvas.width / 2);
     		var y = (canvas.height / 2);
-      		var text = "テスト";
-    		ctx.fillText(text.value, x, y);
+    		ctx.fillText("テスト" x, y);
 	});
 });
 
