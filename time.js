@@ -20,7 +20,7 @@ window.addEventListener('load', function(){
     
     //Canvas
     var image = new Image();
-	image.src = 'image001.png';
+	image.src = 'image002.png';
 	image.onload = (function () {
 		console.log("test2");
 		//画像ロードが完了してからキャンバスの準備をする
