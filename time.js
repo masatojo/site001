@@ -6,7 +6,6 @@ window.addEventListener('load', async function () {
     //Canvas
     var image = new Image();
     image.src = 'image002.png';
-    image.style.width = '50%';
     image.onload = (function () {
         //画像ロードが完了してからキャンバスの準備をする
         var canvas = document.getElementById("testCanvas");
@@ -16,7 +15,7 @@ window.addEventListener('load', async function () {
         canvas.height = image.height;
         //キャンバスに画像を描画（開始位置0,0）
         ctx.drawImage(image, 0, 0);
-        ctx.font = '32px serif';
+        ctx.font = '25px serif';
         ctx.fillStyle = '#404040';
         //文字の配置を指定（左上基準にしたければtop/leftだが、文字の中心座標を指定するのでcenter
         ctx.textBaseline = 'center';
