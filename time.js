@@ -29,29 +29,31 @@ window.addEventListener('load', async function(){
 	});
 });
 
-async function getDate(){
-    var date;
-    const url = "https://worldtimeapi.org/api/timezone/Asia/Tokyo";
-    let r = new XMLHttpRequest();
-    r.open('GET', url);
-    r.responseType = 'json';
-    r.send();
-    console.log("呼び出し1");
+function getDate() {
+    return new Promise(resolve => {
+        var date;
+        const url = "https://worldtimeapi.org/api/timezone/Asia/Tokyo";
+        let r = new XMLHttpRequest();
+        r.open('GET', url);
+        r.responseType = 'json';
+        r.send();
+        console.log("呼び出し1");
 
-    r.onreadystatechange.then(() =>{
-	console.log("呼び出し2");
-        if (r.readyState == 4 && r.status == 200) {
-            const jsonStr = JSON.stringify(r.response);
-            const obj = JSON.parse(jsonStr);
-            let time = document.getElementById("time");
-            date = new Date(obj["unixtime"] * 1000);//付け足したやつなので変になったら消しておいてください
-            //time.innerHTML = obj["unixtime"]*;
-            time.innerHTML= date
-	    console.log(date);
-	    return date;
-        }
+        r.onreadystatechange = function () {
+            console.log("呼び出し2");
+            if (r.readyState == 4 && r.status == 200)
+            {
+                const jsonStr = JSON.stringify(r.response);
+                const obj = JSON.parse(jsonStr);
+                let time = document.getElementById("time");
+                date = new Date(obj["unixtime"] * 1000);//付け足したやつなので変になったら消しておいてください
+                //time.innerHTML = obj["unixtime"]*;
+                time.innerHTML = date
+                console.log(date);
+                resolve(date);
+            }
+        };
     });
-    return date;
 }
 
 
