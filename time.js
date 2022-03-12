@@ -36,9 +36,10 @@ async function getDate(){
     r.open('GET', url);
     r.responseType = 'json';
     r.send();
-    console.log("呼び出し");
+    console.log("呼び出し1");
 
     r.onreadystatechange = async() => {
+	console.log("呼び出し2");
         if (r.readyState == 4 && r.status == 200) {
             const jsonStr = JSON.stringify(r.response);
             const obj = JSON.parse(jsonStr);
