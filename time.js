@@ -30,13 +30,13 @@ window.addEventListener('load', async function(){
 });
 
 async function getDate(){
-    console.log("呼び出し");
     const date;
     const url = "https://worldtimeapi.org/api/timezone/Asia/Tokyo";
     let r = new XMLHttpRequest();
     r.open('GET', url);
     r.responseType = 'json';
     r.send();
+    console.log("呼び出し");
 
     r.onreadystatechange = () => {
         if (r.readyState == 4 && r.status == 200) {
