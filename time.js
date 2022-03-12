@@ -6,7 +6,7 @@ window.addEventListener('load', async function () {
     //Canvas
     var image = new Image();
     image.src = 'image002.png';
-    Image.height = 100;
+     Image.style.width = '50%';
     image.onload = (function () {
         //画像ロードが完了してからキャンバスの準備をする
         var canvas = document.getElementById("testCanvas");
