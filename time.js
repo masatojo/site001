@@ -1,6 +1,7 @@
 //テストコード
 window.addEventListener('load', async function(){
     var date = await getDate();
+    console.log(date);
     
     //Canvas
     var image = new Image();
@@ -43,7 +44,7 @@ async function getDate(){
             const date = new Date(obj["unixtime"] * 1000);//付け足したやつなので変になったら消しておいてください
             //time.innerHTML = obj["unixtime"]*;
             time.innerHTML= date
-	    console.log("test3");
+	    console.log(date);
 	    return date;
         }
     }
