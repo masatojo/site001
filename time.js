@@ -30,7 +30,7 @@ window.addEventListener('load', async function(){
 });
 
 async function getDate(){
-    var url = "https://worldtimeapi.org/api/timezone/Asia/Tokyo";
+    const url = "https://worldtimeapi.org/api/timezone/Asia/Tokyo";
     let r = new XMLHttpRequest();
     r.open('GET', url);
     r.responseType = 'json';
@@ -40,7 +40,7 @@ async function getDate(){
         if (r.readyState == 4 && r.status == 200) {
             const jsonStr = JSON.stringify(r.response);
             const obj = JSON.parse(jsonStr);
-            const time = document.getElementById("time");
+            let time = document.getElementById("time");
             const date = new Date(obj["unixtime"] * 1000);//付け足したやつなので変になったら消しておいてください
             //time.innerHTML = obj["unixtime"]*;
             time.innerHTML= date
