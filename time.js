@@ -48,9 +48,8 @@ function getDate() {
                 let time = document.getElementById("time");
                 date = new Date(obj["unixtime"] * 1000);//付け足したやつなので変になったら消しておいてください
                 //time.innerHTML = obj["unixtime"]*;
-                datex=date.replace(/GMT/g,"\n");
                 
-                time.innerHTML = datex
+                time.innerHTML = date
                 console.log(date);
                 resolve(date);
             }
