@@ -40,8 +40,8 @@ async function getDate(){
         if (r.readyState == 4 && r.status == 200) {
             const jsonStr = JSON.stringify(r.response);
             const obj = JSON.parse(jsonStr);
-            var time = document.getElementById("time");
-            date = new Date(obj["unixtime"] * 1000);//付け足したやつなので変になったら消しておいてください
+            const time = document.getElementById("time");
+            const date = new Date(obj["unixtime"] * 1000);//付け足したやつなので変になったら消しておいてください
             //time.innerHTML = obj["unixtime"]*;
             time.innerHTML= date
 	    return date;
