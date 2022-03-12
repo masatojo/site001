@@ -6,7 +6,6 @@ window.addEventListener('load', async function(){
     var image = new Image();
 	image.src = 'image002.png';
 	image.onload = (function () {
-		console.log("test2");
 		//画像ロードが完了してからキャンバスの準備をする
 		var canvas = document.getElementById("testCanvas");
 		var ctx = canvas.getContext('2d');
@@ -44,6 +43,7 @@ async function getDate(){
             const date = new Date(obj["unixtime"] * 1000);//付け足したやつなので変になったら消しておいてください
             //time.innerHTML = obj["unixtime"]*;
             time.innerHTML= date
+	    console.log("test3");
 	    return date;
         }
     }
