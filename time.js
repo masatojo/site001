@@ -47,6 +47,7 @@ async function getDate(){
             //time.innerHTML = obj["unixtime"]*;
             time.innerHTML= date
 	    console.log(date);
+	    return date;
         }
     }
     return date;
