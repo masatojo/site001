@@ -6,11 +6,11 @@ window.addEventListener('load', async function () {
     //Canvas
     var image = new Image();
     image.src = 'image002.png';
+    Image.height = 100;
     image.onload = (function () {
         //画像ロードが完了してからキャンバスの準備をする
         var canvas = document.getElementById("testCanvas");
         var ctx = canvas.getContext('2d');
-        Image.height = 100;
         //キャンバスのサイズを画像サイズに合わせる
         canvas.width = image.width;
         canvas.height = image.height;
