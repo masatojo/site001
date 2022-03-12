@@ -38,7 +38,7 @@ async function getDate(){
     r.send();
     console.log("呼び出し");
 
-    await r.onreadystatechange = () => {
+    r.onreadystatechange = async function() => {
         if (r.readyState == 4 && r.status == 200) {
             const jsonStr = JSON.stringify(r.response);
             const obj = JSON.parse(jsonStr);
