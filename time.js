@@ -1,5 +1,5 @@
 //テストコード
-window.addEventListener('load', function(){
+window.addEventListener('load', async function(){
     var date = await getDate();
     
     //Canvas
