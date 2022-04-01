@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/3.0.0-rc.5/web3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/time.js"></script>
+    <title>NFTime</title>
+    <!-- <link href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css" rel="stylesheet">
+    <link href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/4-1-4/css/4-1-4.css" rel="stylesheet">
+    -->
+  </head>
+  <body>
+   <!-- <div id="splash">
+      <div id="splash_logo">
+        <img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/4-1-4/img/loading.svg" alt="" class="fadeUp">
+      </div>
+    </div>-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">NFTime</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Marketplace</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Team</a>
+            </li>
+           
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div style="margin-top: 60px" class="row text-center">
+        <div class="col-md-2">
+          <h2>NFTime</h2>
+        </div>
+      </div>
+
+      <div class="row text-right">
+        <div class="col-md-12">
+          <button id="enableMetamask" class="btn btn-primary" onclick="loginWithEth()">
+            Connect with Metamask
+          </button>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-12">
+          <span id="status"></span>
+        </div>
+      </div>
+
+      <div class="row text-center" style="margin-top: 30px">
+        <div class="col-md-12"><h3></h3>
+          
+      </div>
+   
+       <h4 id = "time" class="heading_quiz"></h4>
+        <div
+       class="
+         flex
+         w-full
+         h-full
+         justify-center
+         content-center
+         items-center
+         space-x-4
+       " >
+       <p><canvas id="testCanvas" width="480" height="320"></canvas></p>
+      </div>
+
+     
+      <div style="margin-top: 30px" class="row text-center">
+      </div>
+      <div class="row text-center">
+        <div class="col-md-12">
+          <span><i id="hash"></i></span>
+        </div>
+      </div>
+     
+      <div style="margin-top: 30px" class="row text-center">
+        <div class="col-md-12">
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-12">
+          <span><i id="contractAddress"></i></span>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-12">
+          Memo
+          <input type=text id="tokenId"/>        
+          <span>
+            <button id="changeTemplate" class="btn btn-primary">
+              Mint
+            </button>
+            <button id="changeTemplate" class="btn btn-primary" onclick="doReload()">
+              Reload time
+            </button></span>
+        </div>
+      
+      </div>
+     
+    </div>
+    <script src="js/minter.js"></script>
+  </body>
+</html>
