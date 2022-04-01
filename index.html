@@ -11,6 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="./js/time.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <title>NFTime</title>
     <!-- <link href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css" rel="stylesheet">
     <link href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/4-1-4/css/4-1-4.css" rel="stylesheet">
@@ -31,10 +32,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Marketplace</a>
+              <a class="nav-link" href="marketplace.html">Marketplace</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Team</a>
@@ -70,28 +71,10 @@
       </div>
    
        <h4 id = "time" class="heading_quiz"></h4>
-        <div
-       class="
-         flex
-         w-full
-         h-full
-         justify-center
-         content-center
-         items-center
-         space-x-4
-       " >
-       <p><canvas id="testCanvas" width="480" height="320"></canvas></p>
+        <div>
+       <p><canvas id="testCanvas"></canvas></p>
       </div>
 
-     
-      <div style="margin-top: 30px" class="row text-center">
-      </div>
-      <div class="row text-center">
-        <div class="col-md-12">
-          <span><i id="hash"></i></span>
-        </div>
-      </div>
-     
       <div style="margin-top: 30px" class="row text-center">
         <div class="col-md-12">
         </div>
@@ -104,18 +87,16 @@
       <div class="row text-center">
         <div class="col-md-12">
           Memo
-          <input type=text id="tokenId"/>        
-          <span>
+          <input type=text id="tokenId"/>  
             <button id="changeTemplate" class="btn btn-primary">
               Mint
             </button>
             <button id="changeTemplate" class="btn btn-primary" onclick="doReload()">
               Reload time
-            </button></span>
+            </button>
         </div>
       
       </div>
-     
     </div>
     <script src="js/minter.js"></script>
   </body>
